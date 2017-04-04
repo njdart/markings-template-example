@@ -7,17 +7,18 @@
  */
 module.exports.default = function(taskDefs) {
 
-  // We ignore any existing taskDefs, this is intended as a bootstrap function for the markdown
+  let taskOrder = taskDefs.taskOrder;
+  let tasks = taskDefs.tasks;
 
-  taskDefs.tasks[exampleTaskName] = exampleTask;
-
-  return {
-    taskOrder: taskDefs.taskOrder.concat(['exampleTaskName']),
-    tasks: taskDefs.tasks
+  tasks['exampleTaskName'] = (text) => {
+    return '\n\n<h1>Modifying Text is Easy!</h1>\n\n' + txt;
   };
 
-};
+  taskOrder = taskOrder.concat(['exampleTaskName']);
 
-function exampleTaskName(txt) {
-  return '\n\n<h1>Modifying Text is Easy!</h1>\n\n' + txt;
+  return {
+    taskOrder,
+    tasks
+  };
+
 };
