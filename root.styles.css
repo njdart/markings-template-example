@@ -1,4 +1,36 @@
 body {
   max-width: 1024px;
-  font-family: verdana;
+  font-family: sans-serif, verdana;
+  color: white;
+  background-color: #666688;
+}
+
+h1 {
+  border-bottom: 1px solid #444;
+}
+
+img {
+  max-width: 1024px;
+  margin: 0px auto;
+  position: relative;
+}
+
+a[href] {
+  text-decoration: none;
+  color: black;
+}
+
+code {
+  background-color: #ddd;
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+}
+
+em {
+  color: #446;
+}
+
+strong {
+  font-weight: 800;
 }

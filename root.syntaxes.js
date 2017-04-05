@@ -10,11 +10,23 @@ module.exports.default = function(taskDefs) {
   let taskOrder = taskDefs.taskOrder;
   let tasks = taskDefs.tasks;
 
-  tasks['exampleTaskName'] = (text) => {
-    return '\n\n<h1>Modifying Text is Easy!</h1>\n\n' + txt;
-  };
+  tasks['exampleTask'] = {
+    runTasksBefore: [],
+    runTasksAfter: [],
+    runBeforesIfDependency: false,
+    runAftersIfDependency: false,
+    disabled: false,
+    syntaxes: [
+      {
+        name: 'An Example syntax in an example task',
+        do: function(text) {
+          return '\n\n<h1>Modifying Text is Easy!</h1>\n\n' + text;
+        }
+      }
+    ]
+  }
 
-  taskOrder = taskOrder.concat(['exampleTaskName']);
+  taskOrder = taskOrder.concat(['exampleTask']);
 
   return {
     taskOrder,
