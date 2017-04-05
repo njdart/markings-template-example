@@ -19,6 +19,7 @@ module.exports.default = function(taskDefs) {
     syntaxes: [
       {
         name: 'An Example syntax in an example task',
+        disabled: false,
         do: function(text) {
           return '\n\n<h1>Modifying Text is Easy!</h1>\n\n' + text;
         }
