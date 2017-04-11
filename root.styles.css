@@ -1,12 +1,13 @@
-body {
-  max-width: 1024px;
+div.markdownContainer {
+  width: 100%;
   font-family: sans-serif, verdana;
-  color: white;
-  background-color: #666688;
+  background-color: #282c34;
+  color: #abb2bf;
 }
 
-h1 {
-  border-bottom: 1px solid #444;
+div.markdownDocument {
+  min-width: 512px;
+  padding: 5px;
 }
 
 img {
@@ -16,19 +17,31 @@ img {
 }
 
 a[href] {
-  text-decoration: none;
-  color: black;
+  color: #abb2bf;
+  text-recoration: underline;
 }
 
 code {
-  background-color: #ddd;
   padding: 1px 5px;
   border-radius: 3px;
   border: 1px solid #aaa;
+  background-color: #aab1c1;
+  color: #1e1e1e;
+  font-family: monospace;
 }
 
-em {
-  color: #446;
+pre > code {
+  display: block;
+  border: 0px solid;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  counter-reset: line;
+  border-radius: 0px;
+}
+
+hr {
+  border-color: #aab1c1;
+  background-color: #aab1c1;
 }
 
 strong {
