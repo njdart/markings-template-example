@@ -1,13 +1,9 @@
-div.markdownContainer {
+body {
   width: 100%;
   font-family: sans-serif, verdana;
   background-color: #282c34;
   color: #abb2bf;
-}
-
-div.markdownDocument {
   min-width: 512px;
-  padding: 5px;
 }
 
 img {
