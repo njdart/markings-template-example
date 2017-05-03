@@ -50,7 +50,7 @@ module.exports.default = function(taskDefs) {
     ]
   };
 
-  taskOrder = ['fillertexts'].concat(taskOrder);
+  taskOrder = taskOrder.concat('fillertexts');
 
   return {
     taskOrder,

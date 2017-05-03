@@ -22,24 +22,24 @@
 module.exports.default = function rootTemplate(template) {
 
   template.abstract = true;
+  template.sections = []; // reset any sections
+
   template.sections.push({
     name: 'Header',
     file: './header.md',
-    // template: '# markdown string'
-    expectedContent: {
-      before: {
-        file: 'beforeContent.md', // will be created
-        onMissing: () => {
-          return '<h1>This text will be substituted for the missing content!</h1>';
-        }
-      },
-      after: {
-        file: 'afterContent.md',
-        onMissing: () => {
-          return '<h1>This text will be substituted for the missing content!</h1>';
-        }
-      }
-    },
+  });
+
+  template.sections.push(this.requireUserContent({
+    name: 'body',
+    file: 'content.md',
+    onMissing() {
+      return '<h1 style="text-align: center;">Missing Main Content!</h1>';
+    }
+  }));
+
+  template.sections.push({
+    name: 'Footer',
+    file: './footer.md'
   });
 
   return template;

@@ -1,5 +1,7 @@
 body {
   width: 100%;
+  margin: 0px;
+  padding: 10px;
   font-family: sans-serif, verdana;
   background-color: #282c34;
   color: #abb2bf;
