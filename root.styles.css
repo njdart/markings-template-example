@@ -1,11 +1,15 @@
 body {
   width: 100%;
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
   font-family: sans-serif, verdana;
   background-color: #282c34;
   color: #abb2bf;
   min-width: 512px;
+}
+
+div, p, h1, h2, h3, h4, h5 {
+  margin: 5px 10px;
 }
 
 img {
@@ -44,4 +48,44 @@ hr {
 
 strong {
   font-weight: 800;
+}
+
+header {
+  text-align: center;
+}
+
+.quarterWidth {
+  display: inline-block;
+  width: 25%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerAtomLogo {
+  width: 80px;
+}
+.headerElectronLogo {
+  width: 130px;
+}
+
+footer {
+  height: 138px;
+  position: fixed;
+  bottom: 0px;
+  border-top: 2px solid #AAA;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #282c34;
+}
+
+.footerPushup {
+  height: 160px;
+}
+
+.copyrightNotice {
+  text-align: center;
+}
+
+.footerNotice {
+  style="width: 80%;"
 }
