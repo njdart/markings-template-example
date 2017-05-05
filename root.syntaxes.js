@@ -50,7 +50,8 @@ module.exports.default = function(taskDefs) {
     ]
   };
 
-  taskOrder = taskOrder.concat('fillertexts');
+  // the fillertexts needs to be inserted after the 'preParseCleanup' and before 'formParahraphs'
+  taskOrder.splice(taskOrder.indexOf('preParseCleanup') + 1, 0, 'fillertexts');
 
   return {
     taskOrder,
