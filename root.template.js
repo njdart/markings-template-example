@@ -23,25 +23,12 @@ const Path = require('path');
  */
 module.exports.default = function rootTemplate(template) {
 
-  template.abstract = false;
+  template.abstract = true;
   template.sections = []; // reset any sections
 
   template.sections.push({
     name: 'Header',
     file: Path.join(__dirname, './header.md')
-  });
-
-  template.sections.push(this.requireUserContent({
-    name: 'body',
-    file: 'example-document.md',
-    onMissing() {
-      return '<h1 style="text-align: center;">Missing Main Content!</h1>';
-    }
-  }));
-
-  template.sections.push({
-    name: 'Footer',
-    file: Path.join(__dirname, './footer.md')
   });
 
   return template;
