@@ -21,8 +21,19 @@ module.exports.default = function rootTemplate(template) {
   }));
 
   template.sections.push({
+    name: 'Version Control',
+    markdown: `
+
+# Document Version
+
+[[git-version]]
+
+`
+  });
+
+  template.sections.push({
     name: 'Introduction head',
-    markdown: '# Intruduction'
+    markdown: '# Introduction'
   });
 
   template.sections.push(this.requireUserContent({
